@@ -14,8 +14,6 @@
 
 **其中banner前台展示代码部分：**
 
-![image-20220802143727957](E:\Typora\typora-user-images\image-20220802143727957.png)
-
 ---------------------------------------------------------
 
 
@@ -28,7 +26,6 @@
 
 #### 	*Feigin：*
 
-<img src="E:\Typora\typora-user-images\image-20220802115702519.png" alt="image-20220802115702519" style="zoom:67%;" />
 
 #### 	*Gateway：*
 
@@ -40,15 +37,13 @@
 
 （3）**过滤器**。一个标准的Spring webFilter。Spring cloud gateway中的filter分为两种类型的Filter，分别是Gateway Filter和Global Filter。过滤器Filter将会对请求和响应进行修改处理
 
-<img src="E:\Typora\typora-user-images\image-20220802000754181.png" alt="image-20220802000754181" style="zoom:50%;" />
 
-​	如上图所示，Spring cloud Gateway发出请求。然后再由**Gateway Handler Mapping**中找到与请求相匹配的路由，将其发送到**Gateway web handler**。Handler再通过指定的**过滤器链**将请求发送到我们实际的服务执行业务逻辑，然后返回。
+​	Spring cloud Gateway发出请求。然后再由**Gateway Handler Mapping**中找到与请求相匹配的路由，将其发送到**Gateway web handler**。Handler再通过指定的**过滤器链**将请求发送到我们实际的服务执行业务逻辑，然后返回。
 
 #### 	*canal：*
 
 
 
-![image-20220801233912547](E:\Typora\typora-user-images\image-20220801233912547.png)
 
 #### 	*SpringSecurity：*
 
@@ -56,7 +51,6 @@
 
 权限管理包含三个功能模块：`菜单管理`、`角色管理`和`用户管理`
 
-![image-20220802110535559](E:\Typora\typora-user-images\image-20220802110535559.png)
 
 Web 应用的安全性包括`用户认证`（Authentication）和`用户授权`（Authorization）两个部分。
 
@@ -72,31 +66,19 @@ Web 应用的安全性包括`用户认证`（Authentication）和`用户授权`�
 
 使用Redis对首页面信息进行缓存，并且用于记录登录信息。
 
-![image-20220802113239011](E:\Typora\typora-user-images\image-20220802113239011.png)
 
 添加redis配置类，添加@Cacheable注释，缓存课程和讲师。
-
-<img src="E:\Typora\typora-user-images\image-20220802113535722.png" alt="image-20220802113535722" style="zoom: 67%;" />
-
-<img src="E:\Typora\typora-user-images\image-20220802113600619.png" alt="image-20220802113600619" style="zoom: 67%;" />
-
 
 
 ​	使用ECharts做图表展示，使用EasyExcel完成分类批量添加。
 
 #### 	*ECharts：*
 
-<img src="E:\Typora\typora-user-images\image-20220802114811767.png" alt="image-20220802114811767"  />
-
 #### 	*EasyExcel*
 
 ​	课程分类存储结构：一级分类和二级分类
 
-<img src="E:\Typora\typora-user-images\image-20220802120210654.png" alt="image-20220802120210654" style="zoom: 67%;" />	
-
 EasyExcel是阿里巴巴开源的一个excel处理框架，`以使用简单、节省内存著称`。EasyExcel能大大减少占用内存的主要原因是在解析Excel时没有将文件数据一次性全部加载到内存中，而是从磁盘上一行行读取数据，逐个解析。
-
-<img src="E:\Typora\typora-user-images\image-20220802120021365.png" alt="image-20220802120021365" style="zoom:67%;" />	
 
 **课程分类读取Excel文件方法：**
 
